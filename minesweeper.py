@@ -1,24 +1,25 @@
 import pygame
 
 def findSurroundingBombs(arr, row, col):
-    life = 0 
+    bomb_count = 0 
 
-    if( row >0 and arr[row -1][col] == 1):
-        life += 1
-    if( row < arr.length -1 and arr[row +1][col] == 1):
-        life += 1
-    if( col < arr[0].length -1 and arr[row][col +1] == 1):
-        life += 1
-    if( col > 0 and arr[row][col -1] == 1):
-        life += 1
-    if ( (col > 0 and row >0) and arr[row -1][col-1] == 1 ):
-        life += 1
-    if ( (col > 0 and row < arr.length-1) and arr[row +1][col-1] == 1 ):
-        life += 1
-    if ( (col < arr[0].length -1 and row < arr.length-1) and arr[row +1][col+1] == 1 ):
-        life +=1
-    if ( (col < arr[0].length -1 and row >0) and arr[row - 1][col+1] == 1):
-        life += 1
+    if row > 0 and arr[row - 1][col] == 1:
+        bomb_count += 1
+    if row < len(arr) - 1 and arr[row + 1][col] == 1:
+        bomb_count += 1
+    if col < len(arr[0]) - 1 and arr[row][col + 1] == 1:
+        bomb_count += 1
+    if col > 0 and arr[row][col - 1] == 1:
+        bomb_count += 1
+    if col > 0 and row > 0 and arr[row - 1][col - 1] == 1:
+        bomb_count += 1
+    if col > 0 and row < len(arr) - 1 and arr[row + 1][col - 1] == 1:
+        bomb_count += 1
+    if col < len(arr[0]) - 1 and row < len(arr) - 1 and arr[row + 1][col + 1] == 1:
+        bomb_count += 1
+    if col < len(arr[0]) - 1 and row > 0 and arr[row - 1][col + 1] == 1:
+        bomb_count += 1
         
-    return life 
+    return bomb_count
+
 
