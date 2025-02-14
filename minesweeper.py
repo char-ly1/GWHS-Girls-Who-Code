@@ -1,7 +1,8 @@
 import pygame
 
-def findSurroundingBombs(arr, row, col):
+def find_surrounding_bombs(arr, row, col):
     bomb_count = 0 
+
 
     if row > 0 and arr[row - 1][col] == 1:
         bomb_count += 1
@@ -21,5 +22,4 @@ def findSurroundingBombs(arr, row, col):
         bomb_count += 1
         
     return bomb_count
-
 
