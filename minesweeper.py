@@ -2,7 +2,7 @@ import pygame
 
 class Minesweeper:
     
- 
+# Board is 400 x 400 according to Nicole 
     def __init__(self):
         # 3x3 grid with bombs surrounding the center
         self.grid = [
@@ -34,11 +34,15 @@ class Minesweeper:
             
         return bomb_count
     
-def main():
-    game = Minesweeper()
-    center_bomb_count = game.find_surrounding_bombs(1, 1)  # Check surrounding bombs at (1,1)
-    print("Bombs around center:", center_bomb_count)
+    def mouse_click_to_grid(self, x, y):
+        return 0;
+    
+    def main():
+        game = Minesweeper()
+        center_bomb_count = game.find_surrounding_bombs(1, 1)  # Check surrounding bombs at (1,1)
+        print("Bombs around center:", center_bomb_count)
 
 
-if __name__ == "__main__":
-    main()
+    if __name__ == "__main__":
+        main()
+    
