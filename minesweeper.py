@@ -2,7 +2,7 @@ import pygame
 
 class Minesweeper:
     
-
+ 
     def __init__(self):
         # 3x3 grid with bombs surrounding the center
         self.grid = [
