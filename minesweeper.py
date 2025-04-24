@@ -38,7 +38,7 @@ class Minesweeper:
         # 400 x 400 pixel grid
         # in game, 10 x 10 cell grid
         # each cell is 40 x 40 pixels
-        # return cell index from 0 to 9 based on the pixel coordinates
+        # return cell index from 0 to 9 based on the pixel coordinates :D
         x_cor = x // 40
         y_cor = y // 40
         if(x_cor == 10):
