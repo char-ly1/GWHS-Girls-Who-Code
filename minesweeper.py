@@ -46,7 +46,21 @@ class Minesweeper:
         if(y_cor == 10):
             y_cor = 9
         return int(x_cor), int(y_cor)
+    
+    def click_left_right(self):
+        pygame.init()
+        mouse_clicked = pygame.mouse.get_pressed()
+        if mouse_clicked[0] and not mouse_clicked[1]:
+            # left click, select the box
+            print("Left click detected: Selecting the box.")
+            
+        if mouse_clicked[1] and not mouse_clicked[0]:
+            # right click, flag the box
+            print("Right click detected: Flagging the box.")
 
+        if mouse_clicked[0] and mouse_clicked[1]:
+            pass
+        
 
 def main():
     game = Minesweeper()
